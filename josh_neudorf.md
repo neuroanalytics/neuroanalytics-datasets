@@ -1,23 +1,9 @@
 # Josh Neudorf
 
-You should link to github or other social media you want connected.
-
-If you want to add any images, add them with:
-[Image_reference](./images/image.jpg)
-
 ## Background
 
-A short paragraph about your background and experiences.
+Josh Neudorf completed his B.Sc., Master’s, and PhD degrees under the supervision of Ron Borowsky at the University of Saskatchewan, studying cognitive and computational neuroscience. His Master’s thesis focused on the brain networks supporting language and semantic memory, while his PhD thesis focused on computational network neuroscience questions about how structural connectivity (measured with diffusion MRI) constrains and supports functional connectivity (measured with functional MRI), using graph theory, complexity, and deep learning methods in healthy young adults and patients with epilepsy. Josh held a NSERC Postdoctoral Fellowship and now holds a Canadian Neuroanalytics Scholars Program Postdoctoral Fellowship in Randy McIntosh’s lab at the Institute for Neuroscience & Neurotechnology, Simon Fraser University, investigating the structural and functional connectivity changes in older age that help to preserve cognitive ability, the unique functional network effects of acute sleep restriction on older adults, and the brain connectivity biomarkers of Alzheimer’s Disease.
 
 ## Project
 
-A short paragraph describing your project.
-
-Add links to the relevant shared pages where appropriate, like:
-[deep learning](./deep-learning.md)
-
-and to refer to a specific section:
-[software](./deep-learning.md/#software-and-tools)
-
-If you want to refer to a heading in the same document, just do:
-[In my previous experience](#background)
+The global population is aging rapidly. We are at a crucial juncture for understanding and addressing cognitive decline in this population. Dr. Randy McIntosh and I have identified changes in the structural and functional networks of aging brains associated with cognitive changes in healthy aging. I will investigate how the rewiring of brain connections may lead to functional changes and act as biomarkers for mild cognitive impairment and dementia. These biomarkers will be identified using an artificial intelligence (AI) approach called Graph Neural Network (GNN) Deep Learning, which combines deep learning and graph theory (math for networks), to predict progression from mild cognitive impairment to dementia from brain network configurations. GNN Deep Learning maintains a network representation of the data as a graph rather than forcing the data to fit an inappropriate model, and the parameters needed for accurate prediction can be kept much smaller in the process to improve generalizability and training time. This model can integrate structural and functional connectivity in the same model, utilize brain region attributes (e.g., graph theory degree measures, neurotransmitter expression data from openly available neuromaps data, cortical thickness, fMRI activation intensity, etc.), and consider multiple individual-level variables simultaneously (e.g., age, sex, gender, socioeconomic status, ethnicity, physical activity, sleep quality, etc.) to create a comprehensive and diversely applicable model of the relationship between brain networks and the progression of dementia. There are advanced methods designed for GNN Deep Learning that can probe the model to identify specific elements in the network that drive the prediction (e.g., GNNExplainer), which would provide important insights for health professionals. I have experience applying GNN Deep Learning models to theoretical questions about how structural connectivity constrains functional connectivity, in addition to experience applying graph theory and dynamic functional connectivity approaches to studying preserved vs. declining cognitive ability in healthy aging. My experience has prepared me for this novel project at the intersection of AI and neurodegeneration research, identifying biomarkers for the progression towards mild cognitive impairment and dementia. These methods will be applied to open datasets from the Ontario Neurodegenerative Disease Research Initiative (ONDRI), Alzheimer’s Disease Neuroimaging Initiative (ADNI), Human Connectome Project Lifespan, and Cambridge Centre for Ageing and Neuroscience (Cam-CAN). These brain models will be tailored to age, sex, gender, ethnicity, and socioeconomic status, and shared with health professionals to aid them in identifying risk factors for dementia, allowing for early interventions to protect and maintain healthy brain function.
