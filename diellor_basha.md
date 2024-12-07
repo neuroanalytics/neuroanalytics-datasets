@@ -1,23 +1,12 @@
-# Diellor Basha
+# Diellor Basha 
+[![GitHub](https://img.icons8.com/fluent/48/000000/github.png)](https://github.com/DiellorBasha) [![Google Scholar](https://img.icons8.com/color/48/000000/google-scholar.png)](https://scholar.google.com/citations?user=4LUXFmYAAAAJ)
 
-You should link to github or other social media you want connected.
+## 🎓 Background
 
-If you want to add any images, add them with:
-[Image_reference](./images/image.jpg)
+I am a postdoc scholar at the [Baillet lab](https://www.neurospeed-bailletlab.org/) at McGill University, housed at the Montreal Neurological Institute (the Neuro). My research focuses on the electrophysiology of neurological disorders, with a particular interest in corticothalamic and hippocampal oscillations. I am interested to understand the biological sources of order in the temporal structure of brain activity and they impact cognition, perception, and movement. I completed my doctoral training with [Prof. Igor Timofeev at Universite Laval](https://cervo.ulaval.ca/pages_perso_chercheurs/timofeev_i/index.html), studying the electrophysiology of sleep-dependent memory consolidation. My master's studies were completed at the University of Toronto with Prof. William D Hutchison, where I worked on movement disorders, studying recordings obtained during surgery for deep brain stimulation.
 
-## Background
+## 📝 Project
 
-A short paragraph about your background and experiences.
-
-## Project
-
-A short paragraph describing your project.
-
-Add links to the relevant shared pages where appropriate, like:
-[deep learning](./deep-learning.md)
-
-and to refer to a specific section:
-[software](./deep-learning.md/#software-and-tools)
-
-If you want to refer to a heading in the same document, just do:
-[In my previous experience](#background)
+### Leveraging multimodal neuroimaging to forecast risk and resilience in Alzheimer's Disease 
+The overarching aim of my postdoctoral project is to identify electrophysiological biomarkers of Abeta/tau burden in preclinical [Alzheimer's disease (AD)](alzheimers.md). I will leverage EEG/MEG recordings from the [PREVENT-AD](prevent-ad.md) dataset in combination with extensive longitudinal data that include structural MRI, Ab/tau PET, cerebrospinal fluid (CSF) biochemistry and extensive clinical evaluations of neurosensory and cognitive functioning.
+The first specific aim is to develop a computational toolbox for integrating MEG/EEG with MRI, PET and clinical data for staging, understanding, and treating AD. The AD Toolbox will build on existing computational tools within Brainstorm, an open-source software environment developed and maintained by my host lab (Prof.Baillet) and collaborators. [Brainstorm](https://neuroimage.usc.edu/brainstorm/Introduction) is a widely used research tool, with 2,300 published articles reporting analyses performed with Brainstorm, >36,000 user accounts, 18,000 downloads/month, and 2,500 researchers trained in Brainstorm workshops. The AD Toolbox will add functionalities specific to the study of AD pathophysiology and will feature two modules, organized along complementary analytical strategies: regional analysis – focused on cortical areas associated with early-stage AD and whole-brain analysis – focused on large-scale connectivity measures. AD Toolbox will be designed and distributed as an open-source, user-friendly resource, intended to facilitate future use of MEG/EEG data in the study of AD pathophysiology. The second specific aim is to investigate global changes in brain electrophysiology arising from local Abeta/Tau accumulation, making use of the added Brainstorm functionalities to co-register Aβ/tau maps with the topology of large-scale cortical activity. Using the co-registered data, we will train [models](./deep-learning.md) to forecast voxel-wise estimates of tau and Abeta from MEG, using either hierarchical attention networks (HANs) or convolutional neural networks (CNNs).
