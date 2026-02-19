@@ -1,0 +1,104 @@
+version: 1
+project:
+  id: 4da9cb15-177c-41f5-8c4e-6a24b4e87eab
+  title: Neuroanalytics Datasets - CNS Scholars Guide
+  description: A collection of notes and examples developed by CNS Scholars over their tenure in the program.
+  keywords:
+    - jupyter-book
+  github: neuroanalytics/neuroanalytics-datasets
+  toc:
+    - file: intro.md
+    - title: Meet the Scholars
+      children:
+        - file: hao-ting_wang.md
+        - file: josh_neudorf.md
+        - file: mohamed_abdelhack.md
+        - file: vibujithan_vigneshwaran.md
+        - file: diellor_basha.md
+        - file: julia-katharina_pfarr.md
+        - file: lindsay_munroe.md
+        - file: davor_curic.md
+        - file: nooshin_bahador.md
+    - title: Datasets
+      children:
+        - file: abcd.md
+        - file: adni.md
+        - file: prevent-ad.md
+        - file: ukbb.md
+    - title: Research Topics
+      children:
+        - file: dementia.md
+        - file: parkinsons.md
+        - file: alzheimers.md
+        - file: seizures.md
+        - file: depression.md
+        - file: aging.md
+    - title: Research Methods
+      children:
+        - file: deep-learning.md
+    - title: Research Tools
+      children:
+        - file: containers.md
+        - file: git-overview.md
+        - file: git-examples.md
+        - file: code-environments.md
+        - file: performant-computing.md
+        - file: compute-canada.md
+        - file: cc-jupyter-hub.md
+        - file: hpc-jobs.md
+        - file: bids.md
+        - file: nipoppy.md
+        - file: mriqc.md
+        - file: fmriprep.md
+        - file: qsiprep.md
+        - file: brainstorm.md
+        - file: gigaconnectome.md
+        - file: brian.md
+        - file: pyg-graph-nets.md
+        - file: brainlm.md
+        - file: zettelkasten.md
+    - title: Research Tool Discussions
+      children:
+        - file: coding-obscurities.md
+        - file: imbalanced-data.md
+    - title: Data Portals
+      children:
+        - file: open-neuro.md
+        - file: ukbb-rap.md
+        - file: brain-code.md
+        - file: conp-data-portal.md
+        - file: brainlife.md
+        - file: dandi.md
+        - file: nightingale.md
+        - file: hbi.md
+        - file: project-management.md
+    - title: Data Modalities
+      children:
+        - file: dwi.md
+        - file: fmri.md
+        - file: smri.md
+        - file: eeg-meg.md
+        - file: pet.md
+    - title: Large Language Models
+      children:
+        - file: llm-overview.md
+        - file: llm-semantic-embedding.md
+        - file: notebooklm.md
+        - file: llm-methods-of-synthesis.md
+    - title: External Resources
+      children:
+        - file: external.md
+    - title: Contributing Formatting and Files
+      children:
+        - file: markdown.md
+        - file: notebooks.ipynb
+        - file: markdown-notebooks.md
+    - title: Appendix
+      children:
+        - file: README.md
+
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
