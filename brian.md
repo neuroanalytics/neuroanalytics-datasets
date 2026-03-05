@@ -1,3 +1,133 @@
 # BRIAN Brain Simulation Tool
 
-Brian is a free, open source simulator for spiking neural networks. It is written in the Python programming language and is available on almost all platforms. We believe that a simulator should not only save the time of processors, but also the time of scientists. Brian is therefore designed to be easy to learn and use, highly flexible and easily extensible.
+BRIAN (specifically **Brian 2**) is an open-source **Python package** designed for developing simulations of **networks of spiking neurons**. Its functionality is primarily aimed at researchers who need a platform that maximizes **flexibility, simplicity, and development speed**. Unlike many other simulators that provide a fixed library of predefined models, BRIAN allows users to define neuron and synaptic models by providing **differential equations in standard mathematical form** as strings.
+
+### Kinds of Simulations and Analyses
+BRIAN supports a wide range of simulations, from simplified phenomenological models to detailed biophysical reconstructions:
+*   **Neural Models:** It can simulate neurons with **simplified dynamics** (e.g., Leaky Integrate-and-Fire, Izhikevich, or Quadratic LIF), **continuous dynamics** (e.g., FitzHugh-Nagumo), and **single-compartment conductance-based models** like the Hodgkin-Huxley model.
+*   **Morphology and Multicompartment Models:** While primarily focused on single-compartment models, BRIAN supports **multicompartment simulations** through morphology objects (soma, cylinders, segments) to model spatial-temporal integration in dendrites.
+*   **Synaptic and Learning Rules:** Users can design new models for **chemical and electrical synapses**, as well as custom **learning rules**.
+*   **Cognitive Task Simulations:** The tool has been used to train spiking neural networks for tasks like **MNIST digit recognition**, **coordinate transformation**, and **motor sequence generation**.
+*   **Analyses:** Existing tools enable researchers to generate **raster plots** of network activity and perform **Spike-Triggered Average (STA)** analyses to investigate neuron receptive fields. It also allows for performance benchmarking by measuring building and simulation times.
+
+### Key Concepts for Creating Simulations
+To create a simulation in BRIAN, users interact with several core concepts:
+
+*   **Equation-Oriented Specification:** Models are described using mathematical formulae and **physical units**. BRIAN automatically checks these units to ensure they are homogenized before allowing a simulation to run, which reduces the likelihood of errors.
+*   **Code Generation:** Behind the scenes, BRIAN converts high-level Python model descriptions into efficient code in languages like **C++, Cython, or Python (numpy)**.
+*   **Operational Modes:**
+	*   **Runtime Mode:** Generates and executes code on the fly from within Python. This is ideal for **rapid prototyping** and interactive exploration.
+	*   **Standalone Mode:** Generates a complete C++ source code tree independent of Brian or Python. This is designed for **maximum performance** and for running models on hardware where Python is unavailable.
+*   **Numerical Solvers:** Because models are defined by equations, BRIAN requires the selection of a **numerical integrator** (e.g., "linear," "exponential Euler," or "Runge-Kutta").
+
+### Caveats and Limitations
+*   **High-Performance Computing (HPC) Support:** Parallelization is considered one of BRIAN’s **weakest characteristics**. It provides **no support for cluster computations** (lacks MPI support for neuron-to-neuron communication) and has limited support for multicore computers.
+*   **Model Formation Time:** BRIAN analyzes and compiles models for every run. For large or complex models, this **building time** can be significantly longer than in other simulators, acting as a potential disadvantage during the development stage.
+*   **Solver Selection:** While BRIAN recommends a "linear solver," it may fail for complex models (like those with Hodgkin-Huxley dynamics), requiring the user to manually select and test alternative solvers, which may impact accuracy or speed.
+*   **Hardware Efficiency:** While it can generate code for GPUs (via
+	frameworks like GeNN) or OpenMP, these exports may have **limited
+	functionality** and may not support all features of the
+	BRIAN/Python language. The OpenMP code generator has also been
+	noted in documentation as potentially inaccurate during its
+	development.
+
+## Examples
+
+The **Leaky Integrate-and-Fire (LIF)** neuron is a common example of a simple spiking neuron model. In the Brian simulator, this model is defined by its membrane potential dynamics and a discontinuous reset mechanism.
+
+### Mathematical Formulation
+The dynamics of a simple LIF neuron follow a **first-order differential equation** that describes how the membrane potential ($v$) evolves over time:
+
+$$v'(t) = -v / \tau_m$$
+
+In this equation, **$\tau_m$ is the membrane time constant**, which determines how quickly the potential "leaks" back to its resting state.
+
+### Spiking and Reset Mechanism
+A spike is not generated by the differential equation itself but by a **threshold condition** defined by the user. The process works as follows:
+1.  **Integration:** The neuron integrates synaptic inputs (currents or voltages), causing the membrane potential to rise.
+2.  **Threshold:** When the membrane potential reaches a predefined **threshold ($V_{threshold}$)**, a spike is evoked.
+3.  **Reset:** Immediately after the spike, the membrane potential is **reset to a lower value ($V_{reset}$)**.
+4.  **Refractory Period:** The neuron may then enter a **refractory period** (e.g., 5 ms), during which it cannot generate another spike regardless of the input.
+
+### Example Parameters
+For a standard simulation, such as the PING network described in the sources, the following parameters might be used:
+*   **Membrane Time Constant ($\tau$):** 10 ms or 20 ms.
+*   **Threshold ($V_{threshold}$):** 1 mV (if reset is 0) or -50 mV (in absolute biophysical terms).
+*   **Reset Voltage ($V_{reset}$):** 0 mV or -50 mV.
+
+#### 1. Defining Parameters with Physical Units
+Brian 2 requires the use of **physical units** (e.g., `ms`, `mV`, `Hz`) for all constants to ensure dimensional consistency.
+```python
+from brian2 import *
+
+# Define parameters using units
+tau = 10*ms
+v_threshold = 1*mV
+v_reset = 0*mV
+```
+
+#### 2. Specifying Equations as Strings
+The dynamics of the neuron are defined by a **string** containing the differential equations in standard mathematical form.
+```python
+# The model follows a first-order differential equation
+# Syntax: 'variable_name_derivative : unit'
+eqs = '''
+dv/dt = -v/tau : volt
+'''
+```
+
+#### 3. Creating a NeuronGroup
+Neurons are organized into a `NeuronGroup`, where you specify the number of neurons, the equations, and the **discontinuous dynamics** (threshold and reset).
+```python
+# Define a group of 5,000 LIF neurons
+# A numerical solver like 'linear' must be explicitly set
+G = NeuronGroup(5000, eqs,
+				threshold='v > v_threshold',
+				reset='v = v_reset',
+				method='linear')
+```
+
+#### 4. Running the Simulation
+The simulation is executed for a specific duration of "model time".
+```python
+# Run for 1 second of simulation time
+run(1*second)
+```
+
+### Syntax Elements Summary
+*   **Equation Specification:** Mathematical formulae are written as strings.
+*   **Unit Enforcement:** Brian 2 automatically checks that units (e.g., `volt`, `second`) are homogenized across equations.
+*   **Solver Choice:** Users must select a numerical integrator, such as the recommended "linear method" for simple LIF models or "rk4" (Runge-Kutta) for more complex ones.
+*   **Refractory Periods:** This can be added to the `NeuronGroup` definition to prevent spiking for a set duration (e.g., `5.01*ms`).
+
+In addtion to describing neuron spiking, researchers can also describe
+the fundamental mechanism for simulating **intracellular chemical
+kinetics** (such as calcium dynamics or ATP metabolism).
+
+In Brian 2, such a simulation is implemented by treating the concentration of a metabolite as an **additional dynamical variable** within the neuron's governing equations.
+
+### Implementation Framework
+
+For example, to code a simulation of ATP metabolism you would follow the **equation-oriented specification** paradigm central to the software.
+
+*   **Define Metabolic Variables:** You specify the metabolite concentration (e.g., `[ATP]`) and its rate of change using a standard **differential equation** written as a string.
+*   **Specify Production and Consumption:** The rates of ATP production (e.g., from glycolysis or oxidative phosphorylation) and consumption (e.g., by ion pumps) are included directly in the differential equation.
+*   **Enforce Physical Units:** You must assign **physical units** (e.g., `mmolar`, `second`, `ampere`) to all variables and constants. Brian 2 automatically checks these to ensure the equations are dimensionally consistent and will not run the simulation if the units are not homogenized.
+*   **Numerical Integration:** Because metabolic processes can introduce complexity, you must explicitly select a **numerical solver** (e.g., `linear`, `exponential Euler`, or `rk4`) to integrate the equations over time.
+
+### Conceptual Syntax Example
+Based on the general syntax described in the sources for simple neurons and chemical kinetics, the model string would look like this:
+
+```python
+# Conceptual example based on BRIAN2's string-based equation logic
+metabolic_eqs = '''
+dv/dt = (I_leak + I_pump) / Cm : volt
+dATP/dt = (ATP_production - ATP_consumption) : mmolar
+ATP_consumption = k_pump * f(v) : mmolar/second
+'''
+```
+
+### Key Considerations and Caveats
+*   **Complexity and Solvers:** If the metabolic model is complex (similar to Hodgkin-Huxley dynamics), the recommended **"linear solver"** may fail. In such cases, you would need to manually select a more robust solver like **Runge-Kutta (rk4)** to maintain accuracy, though this may increase simulation time.
+*   **Spatial Dynamics:** While Brian 2 supports **radial diffusion** (useful for modeling concentration gradients from the cell membrane to the center), it does **not** natively support **longitudinal diffusion** along the length of a dendrite or axon.
+*   **Building Time:** For complex models with many metabolic equations, the **"building time"** (the time Brian 2 takes to analyze and compile the code) may be significantly longer than for simpler spiking models.
