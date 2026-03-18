@@ -15,6 +15,7 @@ parts:
     - file: lindsay_munroe.md
     - file: davor_curic.md
     - file: nooshin_bahador.md
+    - file: tom_george.md
   - caption: Datasets
     chapters:
     - file: abcd.md
