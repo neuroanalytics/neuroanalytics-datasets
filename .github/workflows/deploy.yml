@@ -102,8 +102,8 @@ jobs:
       # Build the book
       - name: Build the book
         run: |
-          mv _toc.yml _toc.yml.bak
-          mv _config.yml _config.yml.bak
+          # mv _toc.yml _toc.yml.bak
+          # mv _config.yml _config.yml.bak
           export BASE_URL="/neuroanalytics-datasets"
           myst build --html
 
