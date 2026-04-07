@@ -19,6 +19,12 @@ project:
         - file: lindsay_munroe.md
         - file: davor_curic.md
         - file: nooshin_bahador.md
+        - file: gourab_k_sar.md
+        - file: johannaBayer.md
+        - file: phillip_johnston.md
+        - file: selena_singh.md
+        - file: tom_george.md
+        - file: trishna_saha_detroja.md
     - title: Datasets
       children:
         - file: abcd.md
