@@ -112,7 +112,7 @@ Bahador, N., & Lankarany, M. (2025). Chirp localization via fine-tuned transform
 
 If you use this software in your research, please cite it as follows:
 
-> [Bahador N, Sengupta S, Saha J, Lankarany M, Zhang L, Skinner F. A software for identification and characterization of theta rhythms in the hippocampus. bioRxiv. Published online 26 March 2025. doi:10.1101/2025.03.25.645280.](https://www.biorxiv.org/content/10.1101/2025.03.25.645280v1.full.pdf)
+> {cite}`bahador2025software`
 
 ### Step-by-Step Instructions for Analyzing Data using MATLAB App
 

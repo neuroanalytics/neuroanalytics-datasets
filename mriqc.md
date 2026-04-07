@@ -134,7 +134,7 @@ normalized across time by that voxel standard deviation across time,
 before computing the RMS of the temporal difference [Nichols2013].
 
 - **Global Correlation (gcor)**: calculates an optimized summary of
-  time-series correlation as in [Saad2013] using AFNI’s @compute_gcor,
+  time-series correlation as in [Saad2013] using AFNI’s \@compute_gcor,
   where is the average of all unit-variance time series in a (#
   timepoints), (# voxels) matrix.
 
