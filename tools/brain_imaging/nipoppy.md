@@ -9,7 +9,7 @@ the FAIR principals (Findable, Accessible, Interoperable, Reusable).
 Be sure to check out the [youtube
 tutorials!](https://www.youtube.com/@Nipoppy-tutorials)
 
-![image](images/nipoppy_protocol.jpg)
+![image](../../images/nipoppy_protocol.jpg)
 
 The framework includes three components:
 	1. A protocol for data wrangling to standardize generation of
