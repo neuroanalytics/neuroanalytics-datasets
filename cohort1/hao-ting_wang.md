@@ -16,14 +16,14 @@ My other contributions includes, but not limited to: [Brainhack School](https://
 Recent research suggests significant overlap in the brain changes underlying various neurodegenerative conditions, including Alzheimer's disease, schizophrenia, and Autism Spectrum disorder. 
 Traditionally these conditions are studied in isolation, but we believe these conditions can be better investigated together as a broad spectrum. 
 This project explores a novel approach to investigate these commonalities by pooling multiple datasets together. 
-Once pooled, we aim to showcase how using a model pretrained on  this big datasets and a machine learning technique called transfer learning, we can predict diagnoses within a smaller clinical dataset, namely in the [PREVENT-AD dataset](./prevent-ad.md).
+Once pooled, we aim to showcase how using a model pretrained on  this big datasets and a machine learning technique called transfer learning, we can predict diagnoses within a smaller clinical dataset, namely in the [PREVENT-AD dataset](../data/databases/prevent-ad.md).
 Ultimately, the goal is to discover markers that can predict the development of cognitive decline.
 
 This analysis will focus on identifying "transdiagnostic brain signatures": 
 shared features across these conditions. 
 Brain scans will be used to extract relevant information. 
-A pre-trained [deep learning](./deep-learning.md) model, informed by data encompassing natural variations in brain health across a large population, 
-will then be applied to a dataset specifically focused on [Alzheimer](./alzheimers.md)'s development. 
+A pre-trained [deep learning](../deep-learning.md) model, informed by data encompassing natural variations in brain health across a large population, 
+will then be applied to a dataset specifically focused on [Alzheimer](../research_topics/alzheimers.md)'s development. 
 The model architecture chosen leverages knowledge of brain connectivity to understand how these features evolve over time. 
 Importantly, it also produces interpretable results, allowing researchers to dissect the model's findings. 
 

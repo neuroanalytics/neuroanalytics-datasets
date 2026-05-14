@@ -27,7 +27,7 @@ The primary goal of this project is to develop and apply new analytical methods 
 
 
 Add links to the relevant shared pages where appropriate, like:
-[deep learning](./deep-learning.md)
+[deep learning](../deep-learning.md)
 
 and to refer to a specific section:
 [software](./deep-learning.md/#software-and-tools)

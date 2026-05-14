@@ -21,7 +21,7 @@ and folder structures to reflect current lab practices and make it
 accessible to a wide range of scientists coming from different
 backgrounds.
 
-![image](images/dcm-to-bids.png)
+![image](../../images/dcm-to-bids.png)
 
 By using this standard you will benefit in the following ways:
 

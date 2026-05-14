@@ -8,90 +8,106 @@ project:
   github: neuroanalytics/neuroanalytics-datasets
   toc:
     - file: intro.md
-    - title: Meet the Scholars
+    - title: Meet the scholars
       children:
-        - file: hao-ting_wang.md
-        - file: josh_neudorf.md
-        - file: mohamed_abdelhack.md
-        - file: vibujithan_vigneshwaran.md
-        - file: diellor_basha.md
-        - file: julia-katharina_pfarr.md
-        - file: lindsay_munroe.md
-        - file: davor_curic.md
-        - file: nooshin_bahador.md
-        - file: gourab_k_sar.md
-        - file: johannaBayer.md
-        - file: phillip_johnston.md
-        - file: selena_singh.md
-        - file: tom_george.md
-        - file: trishna_saha_detroja.md
-        - file: emmanuelle.renauld.md
-    - title: Datasets
+
+      - title: Cohort 1
+        children:
+          - file: cohort1/hao-ting_wang.md
+          - file: cohort1/josh_neudorf.md
+          - file: cohort1/mohamed_abdelhack.md
+          - file: cohort1/vibujithan_vigneshwaran.md
+          - file: cohort1/diellor_basha.md
+          - file: cohort1/julia-katharina_pfarr.md
+          - file: cohort1/lindsay_munroe.md
+          - file: cohort1/davor_curic.md
+          - file: cohort1/nooshin_bahador.md
+
+      - title: Cohort 2
+        children:
+          - file: cohort2/gourab_k_sar.md
+          - file: cohort2/johannaBayer.md
+          - file: cohort2/phillip_johnston.md
+          - file: cohort2/selena_singh.md
+          - file: cohort2/tom_george.md
+          - file: cohort2/trishna_saha_detroja.md
+          - file: cohort2/emmanuelle_renauld.md
+          - file: cohort2/sima_abbasi.md
+
+    - title: Databases
       children:
-        - file: abcd.md
-        - file: adni.md
-        - file: prevent-ad.md
-        - file: ukbb.md
+
+        - title: Dataset
+          children:
+            - file: data/databases/abcd.md
+            - file: data/databases/adni.md
+            - file: data/databases/prevent-ad.md
+            - file: data/databases/ukbb.md
+
+        - title: Data Portals
+          children:
+            - file: data/portals/open-neuro.md
+            - file: data/portals/ukbb-rap.md
+            - file: data/portals/brain-code.md
+            - file: data/portals/conp-data-portal.md
+            - file: data/portals/brainlife.md
+            - file: data/portals/dandi.md
+            - file: data/portals/nightingale.md
+            - file: data/portals/hbi.md
+
     - title: Research Topics
       children:
-        - file: dementia.md
-        - file: parkinsons.md
-        - file: alzheimers.md
-        - file: seizures.md
-        - file: depression.md
-        - file: aging.md
+        - file: research_topics/dementia.md
+        - file: research_topics/parkinsons.md
+        - file: research_topics/alzheimers.md
+        - file: research_topics/seizures.md
+        - file: research_topics/depression.md
+        - file: research_topics/aging.md
     - title: Research Methods
       children:
         - file: deep-learning.md
     - title: Research Tools
       children:
-        - file: containers.md
-        - file: git-overview.md
-        - file: git-examples.md
-        - file: code-environments.md
-        - file: performant-computing.md
-        - file: compute-canada.md
-        - file: cc-jupyter-hub.md
-        - file: hpc-jobs.md
-        - file: bids.md
-        - file: nipoppy.md
-        - file: mriqc.md
-        - file: fmriprep.md
-        - file: qsiprep.md
-        - file: brainstorm.md
-        - file: gigaconnectome.md
-        - file: brian.md
-        - file: pyg-graph-nets.md
-        - file: brainlm.md
-        - file: zettelkasten.md
-    - title: Research Tool Discussions
+
+        - title: Project management
+          children:
+            - file: tools/project-management.md
+            - file: tools/zettelkasten.md
+
+        - title: Computer science
+          children:
+            - file: tools/computer_science/containers.md
+            - file: tools/computer_science/git-overview.md
+            - file: tools/computer_science/git-examples.md
+            - file: tools/computer_science/code-environments.md
+
+        - title: Data management
+          children:
+            - file: tools/data_management/bids.md
+
+        - title: Brain imaging
+          children:
+            - file: tools/brain_imaging/brainlm.md
+            - file: tools/brain_imaging/brainstorm.md
+            - file: tools/brain_imaging/fmriprep.md
+
+    - title: Discussions
       children:
-        - file: coding-obscurities.md
-        - file: imbalanced-data.md
-    - title: Data Portals
+        - file: discussions/coding-obscurities.md
+        - file: discussions/imbalanced-data.md
+    - title: Modalities
       children:
-        - file: open-neuro.md
-        - file: ukbb-rap.md
-        - file: brain-code.md
-        - file: conp-data-portal.md
-        - file: brainlife.md
-        - file: dandi.md
-        - file: nightingale.md
-        - file: hbi.md
-        - file: project-management.md
-    - title: Data Modalities
-      children:
-        - file: dwi.md
-        - file: fmri.md
-        - file: smri.md
-        - file: eeg-meg.md
-        - file: pet.md
+        - file: modalities/dwi.md
+        - file: modalities/fmri.md
+        - file: modalities/smri.md
+        - file: modalities/eeg-meg.md
+        - file: modalities/pet.md
     - title: Large Language Models
       children:
-        - file: llm-overview.md
-        - file: llm-semantic-embedding.md
-        - file: notebooklm.md
-        - file: llm-methods-of-synthesis.md
+        - file: ai_models/llm-overview.md
+        - file: ai_models/llm-semantic-embedding.md
+        - file: ai_models/notebooklm.md
+        - file: ai_models/llm-methods-of-synthesis.md
     - title: External Resources
       children:
         - file: external.md
