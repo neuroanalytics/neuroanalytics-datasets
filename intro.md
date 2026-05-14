@@ -9,8 +9,7 @@ anyone. The goal is to provide a useful starting point to research
 projects that can capitalize on existing open data resources.
 
 The structure of this documentation is still in its early stages - if
-there is systematic structure or information you want to see, please
-make a PR.
+there is systematic information you want to see, please make a PR.
 
 Check out the initial content pages bundled with this sample book to see more.
 

@@ -1,4 +1,6 @@
-# Multi-Modal Machine Learning to Uncover Genetic and Immune Pathways Driving WMH and Cognitive Decline
+# Sima Abbasi Habashi
+
+Project: Multi-Modal Machine Learning to Uncover Genetic and Immune Pathways Driving WMH and Cognitive Decline
 
 ## Background and Rationale
 Cognitive impairment is a life-altering condition, and identifying individuals at risk early is critical. This project aims to uncover biological pathways linking genetic variation to white matter hyperintensity (WMH) burden, a key marker of cerebral small vessel disease and a strong predictor of dementia.
