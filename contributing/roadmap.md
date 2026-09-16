@@ -29,6 +29,22 @@ access and stops short of what turns an analysis into a citable research product
 Documentation of tools is genuinely strong. Documentation of **process** is where the gaps
 are.
 
+### A second axis: analysis and craft
+
+The audit above asked whether every *stage of the lifecycle* was covered. A later pass
+asked a different question — whether the **analytical and craft topics** a scholar needs
+are present regardless of stage — and found a second set of holes, recorded as priorities
+8–12 below.
+
+Two findings stand out. The Research Methods section is **entirely machine learning**:
+there was no classical statistical inference anywhere in a book about analysing clinical
+neuroimaging cohorts. And **cross-cohort pooling is a stated premise of several CNS
+projects** while site harmonization, the thing that makes pooling valid, had no coverage at
+all.
+
+Note that `research_topics/` and `modalities/` pages are deliberately short — they are
+link-dense hubs, not content pages. Their length is not a gap.
+
 ## Priority 1 — Provenance and data versioning
 
 The largest single hole, now partly filled.
@@ -105,6 +121,58 @@ The book already argues for most of STAMPED without naming it — containers for
 portability, provenance for tracking, BIDS for modularity. Naming the framework would let
 those arguments reinforce each other instead of appearing as unrelated advice.
 
+## Priority 8 — Statistics and inference
+
+The largest hole on the second axis. Research Methods covers deep learning and five ML
+method pages; nothing covered inference. A new **Statistics and Inference** section was
+added to hold it.
+
+| Topic | Status |
+|---|---|
+| [Prediction vs inference](../stats/prediction-vs-inference.md) | Stub — the distinction the rest depends on |
+| [Multiple comparisons](../stats/multiple-comparisons.md) | Stub — FWE, FDR, cluster inference, permutation |
+| [Power and sample size](../stats/power-and-sample-size.md) | Stub — effect sizes, inflation under low power |
+| [Mixed models](../stats/mixed-models.md) | Stub — longitudinal and multi-site designs |
+| [Harmonization and site effects](../stats/harmonization.md) | Stub — ComBat; highest value here |
+
+## Priority 9 — Ways to fool yourself
+
+| Topic | Status |
+|---|---|
+| [Data leakage](../discussions/data-leakage.md) | Stub — subject, site, and preprocessing leakage |
+
+Pairs with [imbalanced data](../discussions/imbalanced-data.md), which already covers
+resampling inside the fold.
+
+## Priority 10 — Tools used everywhere and documented nowhere
+
+Each of these appeared across the book only as a name in passing.
+
+| Topic | Status |
+|---|---|
+| [Nilearn](../tools/brain_imaging/nilearn.md) | Stub — the most-used Python neuro package here |
+| [MNE-Python](../tools/brain_imaging/mne-python.md) | Stub — six projects use EEG/MEG |
+| [FreeSurfer](../tools/brain_imaging/freesurfer.md) | Stub — and fMRIPrep already runs it |
+| [Visualizing brain data](../tools/brain_imaging/visualization.md) | Stub — colormaps, thresholds, figures |
+| [Testing research code](../tools/computer_science/testing-research-code.md) | Stub — pytest, CI, regression tests |
+
+## Priority 11 — Privacy and review
+
+| Topic | Status |
+|---|---|
+| [De-identification](../governance/de-identification.md) | Stub — defacing, DICOM scrubbing, PHI in sidecars |
+| [Peer review](../publishing/peer-review.md) | Stub — preprints, response letters, reviewing |
+
+## Priority 12 — Program and career
+
+A different genre from the rest of the book and lower priority, but a fellowship is
+fixed-term and the transition out of it is a real part of the experience here.
+
+| Topic | Status |
+|---|---|
+| [The job market](../career/job-market.md) | Stub |
+| [Conferences and community](../career/conferences-and-community.md) | Stub |
+
 ## Also outstanding
 
 - **Testimonial sections are empty.** Every scholar page has a `Tools & Resources I Used`
@@ -117,6 +185,11 @@ those arguments reinforce each other instead of appearing as unrelated advice.
   currently embedded in the Background paragraph.
 - **Extending the pathway.** [Start Here](../pathway/overview.md) has six steps. Once the
   governance and publishing pages exist, it should gain a step at each end.
+- **Reference management.** Zotero, BibTeX and the citation workflow have no coverage.
+  Deliberately not stubbed, because it overlaps [Zettelkasten](../tools/zettelkasten.md) —
+  the better move is probably a section there than a page of its own.
+- **COMPASS-ND and LORIS** are named in [Arman Hassanpour's project](../cohort2/arman_hassanpour.md)
+  but neither has a page, unlike the other portals in [Databases](../data/portals/brain-code.md).
 
 ## Contributing
 

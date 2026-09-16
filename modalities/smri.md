@@ -21,6 +21,12 @@ process the other modalities:
 3. Anatomical preprocessing is bundled into
    [fMRIPrep](../tools/brain_imaging/fmriprep.md) and
    [QSIPrep](../tools/brain_imaging/qsiprep.md) rather than run separately
+4. [FreeSurfer](../tools/brain_imaging/freesurfer.md) produces the surface reconstruction
+   and morphometric measures themselves — and fMRIPrep has usually already run it for you
+
+Note that structural measures are [particularly sensitive to
+scanner](../stats/harmonization.md), so pooling cortical thickness across sites needs
+harmonization before it means anything.
 
 ## CNS Projects
 

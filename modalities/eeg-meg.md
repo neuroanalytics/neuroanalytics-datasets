@@ -16,8 +16,13 @@ second-largest methodological cluster in the program after deep learning.
 
 - [Brainstorm](../tools/brain_imaging/brainstorm.md) — open-source MEG/EEG analysis
   environment, and the platform the AD Toolbox is being built on
+- [MNE-Python](../tools/brain_imaging/mne-python.md) — the scripted alternative, better
+  suited to batching over a cohort and version-controlling your choices
 - [BIDS](../tools/data_management/bids.md) has EEG and MEG extensions, so the same
   organizational conventions apply
+
+Unlike the MRI path, there is no fMRIPrep equivalent here — no agreed pipeline turns raw
+EEG into analysis-ready data, so more of the decisions are yours to make and record.
 
 ## CNS Projects
 

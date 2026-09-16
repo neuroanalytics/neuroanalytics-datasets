@@ -33,8 +33,24 @@ Browse by **[research topic](../research_topics/alzheimers.md)** —
 **[modality](../modalities/fmri.md)**. Each hub lists the scholars working on it with a
 line on their specific angle.
 
-## Two things that will come up
+## Getting the statistics right
 
+Whichever method you pick, the same handful of things decide whether the result holds up:
+
+- **[Prediction vs inference](../stats/prediction-vs-inference.md)** — decide which
+  question you are answering before choosing how to evaluate it
+- **[Multiple comparisons](../stats/multiple-comparisons.md)** — an uncorrected whole-brain
+  map is not a result
+- **[Power and sample size](../stats/power-and-sample-size.md)** — what your cohort can
+  actually detect
+- **[Mixed models](../stats/mixed-models.md)** — for the longitudinal and multi-site
+  designs most cohorts here have
+- **[Harmonization and site effects](../stats/harmonization.md)** — before pooling anything
+
+## Three things that will come up
+
+- **[Data leakage](../discussions/data-leakage.md)** — the most common reason a good
+  accuracy figure does not survive contact with new data
 - **[Working with imbalanced data](../discussions/imbalanced-data.md)** — clinical outcome
   prediction almost always has far more negatives than positives, and accuracy is a
   misleading metric when it does

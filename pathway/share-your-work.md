@@ -23,6 +23,19 @@ through, adopting it late still beats not adopting it.
 An analysis that cannot be re-run is difficult to publish and impossible to hand over.
 The point of both pages is that "it worked on my machine in 2024" is not a result.
 
+- **[Testing research code](../tools/computer_science/testing-research-code.md)** — a
+  pinned environment guarantees the code runs, not that it is correct. Tests are the other
+  half
+
+## Getting it published
+
+- **[Reporting guidelines](../publishing/reporting-guidelines.md)** — what a methods
+  section has to state
+- **[Peer review](../publishing/peer-review.md)** — preprints, responding to reviewers, and
+  reviewing for others
+- **[Executable articles](../publishing/executable-articles.md)** — when the paper itself
+  can be re-run
+
 ## Sharing data and results
 
 - **[BIDS](../tools/data_management/bids.md)** — makes a dataset FAIR, and shareable

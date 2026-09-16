@@ -51,6 +51,7 @@ project:
         - file: governance/pre-registration.md
         - file: governance/credit-and-contributions.md
         - file: governance/research-administration.md
+        - file: governance/de-identification.md
         - file: governance/stamped.md
 
     - title: Databases
@@ -90,6 +91,13 @@ project:
         - file: methods/transfer-learning.md
         - file: methods/normative-modelling.md
         - file: methods/geometry-aware.md
+    - title: Statistics and Inference
+      children:
+        - file: stats/prediction-vs-inference.md
+        - file: stats/multiple-comparisons.md
+        - file: stats/power-and-sample-size.md
+        - file: stats/mixed-models.md
+        - file: stats/harmonization.md
     - title: Research Tools
       children:
 
@@ -108,6 +116,7 @@ project:
             - file: tools/computer_science/cc-jupyter-hub.md
             - file: tools/computer_science/hpc-jobs.md
             - file: tools/computer_science/performant-computing.md
+            - file: tools/computer_science/testing-research-code.md
 
         - title: Data management
           children:
@@ -122,16 +131,21 @@ project:
             - file: tools/brain_imaging/mriqc.md
             - file: tools/brain_imaging/fmriprep.md
             - file: tools/brain_imaging/qsiprep.md
+            - file: tools/brain_imaging/freesurfer.md
             - file: tools/brain_imaging/gigaconnectome.md
+            - file: tools/brain_imaging/nilearn.md
             - file: tools/brain_imaging/brainstorm.md
+            - file: tools/brain_imaging/mne-python.md
             - file: tools/brain_imaging/brainlm.md
             - file: tools/brain_imaging/brian.md
             - file: tools/brain_imaging/pyg-graph-nets.md
+            - file: tools/brain_imaging/visualization.md
 
     - title: Discussions
       children:
         - file: discussions/coding-obscurities.md
         - file: discussions/imbalanced-data.md
+        - file: discussions/data-leakage.md
     - title: Modalities
       children:
         - file: modalities/dwi.md
@@ -152,6 +166,11 @@ project:
         - file: publishing/data-and-code-release.md
         - file: publishing/reporting-guidelines.md
         - file: publishing/executable-articles.md
+        - file: publishing/peer-review.md
+    - title: Program and Career
+      children:
+        - file: career/job-market.md
+        - file: career/conferences-and-community.md
     - title: External Resources
       children:
         - file: external.md

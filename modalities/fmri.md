@@ -30,6 +30,8 @@ The conventional path, in order:
 
 [Nipoppy](../tools/brain_imaging/nipoppy.md) is useful for managing these pipelines
 across a whole dataset rather than one subject at a time.
+[Nilearn](../tools/brain_imaging/nilearn.md) is the usual next stop once preprocessing is
+done — masking, atlases, timeseries extraction, and plotting.
 
 ## CNS Projects
 
